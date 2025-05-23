@@ -12,3 +12,9 @@ app.get('/', (req, res) => {
 app.listen(PORT, () => {
   console.log(`Serveur lancé sur http://localhost:${PORT}`);
 });
+
+app.get('/api/products', async (req, res) => {
+  const products = [/* بعض المنتجات التجريبية هنا */];
+  res.json(products);
+});
+
